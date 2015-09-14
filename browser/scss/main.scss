@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+
+}
+
+body {
+  background: #fdfdfd;
+  height:100vh;
+  width:98vw;
+  margin:auto;
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+#main {
+  width: 100%;
+  margin: 0 auto;
+  height:100%;
+}
+
+
+@import 'directives/main';
+@import 'home/main';
+@import 'about/main';
+@import 'login/main';
+@import 'whiteboard/main';

@@ -1,0 +1,28 @@
+   	<section id="whiteboard">
+   		<div id="whiteboard-navbar">
+	        <div id="color-selector">
+	            <color-select id="black" class="selected"></color-select>
+	            <color-select id="white"></color-select>
+	            <color-select id="purple"></color-select>
+	            <color-select id="red"></color-select>
+	            <color-select id="blue"></color-select>
+	            <color-select id="green"></color-select>
+	            <color-select id="orange"></color-select>
+	            <color-select id="yellow"></color-select>
+	            <color-select id="brown"></color-select>
+
+	            <div color-select class="marker" onclick="whiteboard.clear(true)"><button class="marker">Clear</button></div>
+	        </div>
+	        <slider></slider>
+	        <line class="selectedShape shape"></line>
+	        <square class='shape'></square>
+	        <circle class='shape'></circle>
+		</div>
+
+        <div id="sketch">
+            <canvas id="paint"></canvas>
+	        <chat id="chat" class="min" ng-show="loggedIn"></chat>
+
+        </div>
+
+     </div>

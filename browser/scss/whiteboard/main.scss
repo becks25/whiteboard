@@ -1,0 +1,178 @@
+#whiteboard {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+
+
+    .person {
+        height:50px;
+        width:50px;
+        padding: 0px;
+        margin:0px;
+    }
+
+
+
+    #sketch{
+        width:100%;
+        height:100%;
+        border: 3px solid black;
+        position:relative;
+    }
+
+    .marker, .shape {
+        width: 40px;
+        height: 40px;
+        display:inline-block;
+        vertical-align:bottom;
+        text-align:center;
+        padding:0px;
+    }
+
+    .marker.selected {
+        border: 2px solid white;
+    }
+
+    
+
+    #whiteboard-navbar{
+        width:100%;
+        padding:1%;
+
+        #color-selector{
+            display:inline-block;
+            vertical-align:text-top;
+        }
+
+
+        #slider{
+            width:20%;
+            display:inline-block;
+            vertical-align:middle;
+
+            .ui-corner-all{
+                border-radius:50px;
+            }
+
+            .ui-state-default{
+                background: none;
+                background-color:black;
+                border:1px solid black;
+            }
+
+            .ui-widget-header{
+                background: none;
+                background-color:black;
+                opacity:0.7;
+                border-bottom-left-radius:4px;
+                border-top-left-radius:4px;
+                border:1px solid black;
+            }
+        }
+
+        #square{
+            height:100%;
+            border:4px solid black;
+        }
+
+        #diagonal{
+            width: 50px;
+            height: 37px;
+            border-bottom: 4px solid black;
+            -webkit-transform:
+                translateY(-10px)
+                translateX(5px)
+                rotate(45deg); 
+            position: absolute;
+        }
+
+        #circle{
+            border-radius:20px;
+            border:4px solid black;
+            height:100%;
+        }
+
+
+    }
+
+    #chat{
+        width:20%;
+        border-top-left-radius:10px;
+
+        z-index:10;
+        position:absolute;
+        bottom:0;
+        right:0;
+        border:2px solid white;
+            
+
+        #chat-header{
+            height:20px;
+            background-color:purple;
+            border-top-left-radius:10px;
+
+        }
+
+        .inactive{
+            opacity:0.5;
+        }
+
+        #chat-body{
+            height:200px;
+            border:1px solid black;
+            background-color:white;
+            overflow:scroll;
+
+            input{
+                position:absolute;
+                bottom:0;
+                width:100%;
+            }
+
+            .message{
+                width:100%;
+                height:auto;
+
+                .thoughtBubble{
+                    background-image: url('/images/typingdots.gif');
+                    background-size: contain;
+                    height:20px;
+                    width:50px;
+                    background-repeat:no-repeat;
+                    display:inline-block;
+                    vertical-align:top;
+                }
+
+                .dots{
+                    height:5px;
+                    width:5px;
+                    border-radius:40px;
+                    background-color:blue;
+                    display:inline-block;
+                    margin-left:2%;
+
+                }
+
+                .float{
+                      display: inline-block;
+                      vertical-align: middle;
+                      -webkit-transform: translateZ(0);
+                      transform: translateZ(0);
+                      box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+                      -webkit-backface-visibility: hidden;
+                      backface-visibility: hidden;
+                      -moz-osx-font-smoothing: grayscale;
+                      -webkit-transition-duration: 0.3s;
+                      transition-duration: 0.3s;
+                      -webkit-transition-property: transform;
+                      transition-property: transform;
+                      -webkit-transition-timing-function: ease-out;
+                      transition-timing-function: ease-out;
+
+                    }
+            }
+        }
+
+    }
+
+}
